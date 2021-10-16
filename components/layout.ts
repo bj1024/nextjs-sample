@@ -1,3 +1,16 @@
+import Navbar from './navbar'
+import Footer from './footer'
+
+export default function Layout({ children }) {
+  return (
+    <>
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
+    </>
+  )
+}
+
 
 import type { AppProps } from 'next/app'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -17,3 +30,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 export default MyApp
+
