@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect, ReactElement } from 'react';
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -10,8 +11,10 @@ import Image from 'next/image'
 
 // <div className={styles.container}>
 
+import Layout from '../components/layout'
 
-const Home: NextPage = () => {
+// const Home: NextPage = () => {
+export default function Login() {
   
   useEffect(() => {
     document.querySelector("body")?.classList.add("text-center");
@@ -20,8 +23,9 @@ const Home: NextPage = () => {
     // {/* <div className={styles['form-signin']}> */ }
       // {/* <main className={styles['form-signin']}> */}
     // <div className="text-center">
-    return (
-      <main className="form-signin">
+  return (
+      <>
+
         <Head>
           <title>login page.</title>
         </Head>
@@ -49,9 +53,15 @@ const Home: NextPage = () => {
             <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
             <p className="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
           </form>
-        </main>
-  
+  </>
   )
 }
 
-export default Home
+Login.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
+}
+// export default Home
