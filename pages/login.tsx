@@ -4,6 +4,8 @@ import React, { useState, useEffect, ReactElement } from 'react';
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
+
 // import 'bootstrap/dist/css/bootstrap.min.css'
 
 // import styles from '../styles/'
@@ -48,8 +50,11 @@ export default function Login() {
                 Remember me
               </label>
             </div>
-            <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-            <p className="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+        {/* <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button> */}
+        <Link href="/dashboard" className="w-100 btn btn-lg btn-primary">
+          <a>Sign in</a>
+        </Link>
+            <p className="mt-5 mb-3 text-muted">&copy; 2021-</p>
           </form>
   </>
   )
