@@ -9,7 +9,7 @@ import Link from 'next/link'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 
 // import styles from '../styles/'
-// import styles from  '../styles/signin.module.css'
+import styles from  '../styles/signin.module.css'
 
 // <div className={styles.container}>
 
@@ -26,8 +26,7 @@ export default function Login() {
       // {/* <main className={styles['form-signin']}> */}
     // <div className="text-center">
   return (
-      <>
-
+     <div className={styles['form-signin']}>
         <Head>
           <title>login page.</title>
         </Head>
@@ -56,7 +55,7 @@ export default function Login() {
         </Link>
             <p className="mt-5 mb-3 text-muted">&copy; 2021-</p>
           </form>
-  </>
+  </div>
   )
 }
 

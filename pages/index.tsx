@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.css'
 
 import Layout from '../components/loginlayout'
 
+import Profile from './profile'
 
 export default function Home() {
   
@@ -23,6 +24,9 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
+        <Profile>
+        </Profile>
+        
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
