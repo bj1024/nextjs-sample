@@ -13,7 +13,7 @@ body {
 
 /* next.jsではrootに<div id="__next"> が入る仕様。 flexboxを1にする。*/
 #__next {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
 }
 
 .form-signin {
