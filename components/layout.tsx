@@ -1,12 +1,11 @@
 
 export default function Layout({ children }: {children: React.ReactNode}) {
+      // {/* <div>header</div> */}
+
+      // {/* <div>hooter</div> */}
   return (
-    <>
-      {/* <div>header</div> */}
-      <main className="form-signin">
+      <main className=''>
         {children}
       </main>
-      {/* <div>hooter</div> */}
-    </>
   )
 }

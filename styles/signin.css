@@ -11,6 +11,10 @@ body {
   background-color: #f5f5f5;
 } 
 
+/* next.jsではrootに<div id="__next"> が入る仕様。 flexboxを1にする。*/
+#__next {
+  flex: 1 0 auto;
+}
 
 .form-signin {
   width: 100%;

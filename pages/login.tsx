@@ -11,7 +11,7 @@ import Image from 'next/image'
 
 // <div className={styles.container}>
 
-import Layout from '../components/layout'
+import LoginLayout from '../components/loginlayout'
 
 // const Home: NextPage = () => {
 export default function Login() {
@@ -29,9 +29,7 @@ export default function Login() {
         <Head>
           <title>login page.</title>
         </Head>
-
           <form>
-            <a href="aa">aaaa</a>
             <img className="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"></img>
             <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
@@ -59,9 +57,9 @@ export default function Login() {
 
 Login.getLayout = function getLayout(page: ReactElement) {
   return (
-    <Layout>
+    <LoginLayout>
       {page}
-    </Layout>
+    </LoginLayout>
   )
 }
 // export default Home
