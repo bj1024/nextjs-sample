@@ -6,7 +6,6 @@ import type { AppProps } from 'next/app'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/globals.scss'
-// import '../styles/signin.css'
 // import Head from 'next/head'
 // import Layout from '../components/layout'
 
