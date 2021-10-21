@@ -33,17 +33,21 @@ const dateToString = (dt: Date): string => {
 interface DashboardInterface {
   name: string;
   url: string;
-  
+  setName: React.Dispatch<React.SetStateAction<string>>
 }
 
-export const DashboardCtx = createContext<DashboardInterface | null>(null);
+// export const DashboardCtx = createContext<DashboardInterface | null>(null);
+export const DashboardCtx = createContext({} as DashboardInterface)
+
+
 
 // Provider in your app
 
-const sampleDashboardContext: DashboardInterface = {
-  name: "sampleDashboardContext Name",
-  url: "http://www.example.com",
-};
+// const sampleDashboardContext: DashboardInterface = {
+//   name: "sampleDashboardContext Name",
+//   url: "http://www.example.com",
+  
+// };
 
   // onDashboardClickの関数を宣言
 
