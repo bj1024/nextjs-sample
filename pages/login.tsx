@@ -50,7 +50,7 @@ export default function Login() {
               </label>
             </div>
         {/* <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button> */}
-        <Link href="/dashboard" className="w-100 btn btn-lg btn-primary">
+        <Link href="/dashboard">
           <a>Sign in</a>
         </Link>
             <p className="mt-5 mb-3 text-muted">&copy; 2021-</p>
