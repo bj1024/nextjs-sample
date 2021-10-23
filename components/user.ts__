@@ -1,0 +1,13 @@
+// interface UserProps{
+//     firstName: string,
+//     lastName: string,
+//     userName: string,
+//     email: string,
+//     password: string,
+//     cpf: string,
+//     contact: string,
+//     isAdmin: boolean
+// }
+// class User {
+    
+// }

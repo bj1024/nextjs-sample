@@ -1,6 +1,8 @@
 
 
 import type { ReactElement, ReactNode } from 'react'
+import React, { useState, useCallback, createContext } from "react";
+
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 
@@ -9,6 +11,16 @@ import '../styles/globals.scss'
 // import Head from 'next/head'
 // import Layout from '../components/layout'
 
+
+
+// コンテキストを定義
+const UserContext = createContext({
+  // 文字列
+  username: "admin",
+
+  // 関数
+  handleUpdateCompletedTask: () => {}
+});
 
 
 // function MyApp({ Component, pageProps }: AppProps) {
