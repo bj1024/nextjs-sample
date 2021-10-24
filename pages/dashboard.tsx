@@ -202,7 +202,7 @@ export default function Dashboard() {
 
             <h2>Counter</h2>
             <div className={``}>
-              <Counter mycount="10"></Counter>
+              <Counter mycount={10}></Counter>
             </div>
 
 
