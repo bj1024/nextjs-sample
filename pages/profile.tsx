@@ -1,6 +1,6 @@
 import { FC } from "react";
 import useSWR from 'swr'
-
+import {fetcher} from "../components/fetcher"
 // function Profile () {
 //   const { data, error } = useSWR('/api/user/123', fetcher)
 
@@ -11,17 +11,19 @@ import useSWR from 'swr'
 //   return <div>hello {data.name}!</div>
 // }
 
-
-type Props = {
+//  "https://dog.ceo/api/breed/hound/images" は 
+// 画像URLを次の形で返す。
+// {
+//   message: [url, url, ...],
+//     status:string
+// }
+type DogCEOAPIImages  = {
   message: string[];
   status: string;
 };
 
-const fetcher = (url: string): Promise<Props> =>
-  fetch(url).then((data) => data.json());
-
 const Profile: FC = () => {
-  const { data, error } = useSWR(
+  const { data, error } = useSWR<DogCEOAPIImages,Error>(
     "https://dog.ceo/api/breed/hound/images",
     fetcher
   );
@@ -31,10 +33,11 @@ const Profile: FC = () => {
 
   return (
     <div className="App">
+        status={data?.status}
       <ul>
-        {data?.message.slice(0,10).map((src) => (
-          <li key={src}>
-            <img src={src}></img>
+        {data?.message.slice(0,10).map((url) => (
+          <li key={url}>
+            <img src={url}></img>
           </li>
         ))}
       </ul>
